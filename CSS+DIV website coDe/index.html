@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html> <!-- html文档开始标记 -->
+	<head><!-- 文档头部开始标记 -->
+		<meta charset="utf-8"><!-- 设置网页编码为UTF-8，文档的编码和浏览器的编码要一致 -->
+		<title>完整网站项目练习</title><!-- 网页标题，显示与浏览器的标签页中 -->
+		<link rel="stylesheet" type="text/css" href="css/style.css"/><!-- 链接名称为style.css的样式表 -->
+	</head><!-- 文档头部结束标记 -->
+	<body><!-- 网页主体部分 -->
+		<div><!-- 整个头部的div 下面划分为三个区域，用三个div表示，分别为顶部、logo和导航 -->
+			<div class="top"><!-- 顶部区域样式为宽度100%占满整个浏览器，行高24px，这里面最后就是div的高度了，背景颜色和文字颜色，pdm值都为0 -->
+				<div class="wp"> <!-- 这个div使用了通用样式，使盒子居中的样式宽度960，没有高度，左右margin为自动；使用text-align：center；可以使盒子中的内联元素居中； -->
+					<div class="z"><!-- 由于父级元素的div使用了居中样式，这两个div是居中的，分别左右浮动 -->
+						<span><a href="">设为首页</a></span><!-- 跟随父级div向左浮动，span的margin值为0，定义a标签中额文字颜色和无下划线样式，并添加伪类，为鼠标悬停时的hover样式 -->
+						<span><a href="">收藏本站</a></span><!-- 同上 -->
+					</div>
+					<div class="y"><!-- 向右浮动 -->
+							<span>2019年06月09日</span><!-- 跟随父级div向右浮动 -->
+							<span>中雨16℃/30℃</span>
+					</div>
+				</div><!-- 居中div结束标记 -->
+			</div><!-- 顶部标签结束 -->
+			<div class="wp"><!-- 居中并定义宽度960px -->
+				<div class="logos"><!-- logo部分的div，其中包含3个子div，定义高度44px，上下margin10px，左右为0 -->
+					<div class="logo z"><!-- 向左浮动，块状元素设置为浮动后就会竟可能的小的显示 -->
+						<h1><a href="index.html"><img src="img/logo.gif" alt="logo"></a></h1>
+					</div>
+					<div class="dianhua y"> <!-- 设置高度47px、行高47px。margin-left15px并向右浮动 -->
+						<span>客服热线: 400-000-000</span><!-- 文字size26px 文字颜色暗红色，文字的大小小于行高，显示的效果就是很宽的一行文字很小，上下都有补白 -->
+					</div>
+					<div class="sousuo y"><!-- 宽度330px，高度16px，margin-top14px，并向右浮动 -->
+						<form action="index.html" method="get"><!-- 构造表单 -->
+							<table cellpadding="0" cellspacing="0" border="0"><!-- 构造表格 单元与单元之间，单元与内容之间的距离均为0；cellpadding 属性规定单元边沿与其内容之间的空白。cellspacing 属性规定的是单元之间的空间。 -->
+								<tr><!-- 构造一行，其中三个单元格 -->
+									<td class="s_z z"><!-- 向左浮动并设置宽度6px，背景为图片不重复 -->
+									</td>
+									<td class="s_c z"><!-- 向左浮动设置宽度240px，背景图片向x轴重复，定义了宽度，所以重复到单元格结束为止 -->
+										<input type="text" name="text" id="s_c_txt/"><!-- 高度10px，根据设置的背景图片的高度来决定，行高10px，border为0，margin-top为1px，宽度200px -->
+									</td>
+									<td class="s_y z"><!-- 向右浮动，宽度22px，背景图片不重复 -->
+										<button type="submit" name="submit"></button><!-- 添加一个登陆按钮，宽度为22px，高度为16px，没有背景颜色，border为0，没有边框，cursor:pointer定义当鼠标悬停在按钮上时，鼠标的样式变为一个小手的样式 -->
+									</td>
+								</tr>
+							</table>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="nav"><!-- 导航栏的div，高度26px，宽度为自动跟随整个浏览器的宽度，设置背景图像向x轴重复。 -->
+				<div class="wp"><!-- 宽度960px，上下margin为0，左右自动，也就是居中。 -->
+					<ul><!-- 构造无序列表 -->
+						<li class="a"><!-- 清除列表样式，向左浮动，行高26px，padding上下为0，左右为34px。 -->
+							<a href="index.html">网站首页</a><!-- 设置链接的下划线为none，链接颜色为白色，字体size为10px；选择器选择类下面的类使用.test.test1中间不能有空格，选择类下面的标签，.test a中间要有空格 -->
+						</li>
+						<li>
+							<a href="index.html">网站首页</a>
+						</li>
+						<li>
+							<a href="index.html">网站首页</a>
+						</li>
+						<li>
+							<a href="index.html">网站首页</a>
+						</li>
+						<li>
+							<a href="index.html">网站首页</a>
+						</li>
+						<li>
+							<a href="index.html">网站首页</a>
+						</li>
+						<li>
+							<a href="index.html">网站首页</a>
+						</li>
+						<li>
+							<a href="index.html">网站首页</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div class="center"><!-- 中部的总体标签 -->
+			<div class="wp"> <!-- div样式居中，宽度960px； -->
+				<div class="ad"> <!-- div下补白为10px； -->
+					<img src="img/ad.gif" width="960px" alt=""><!-- 引入图片，定义图片宽度960px； -->
+				</div>
+				<div class="jianjie z"><!-- 左浮动，宽度540px；高度309px；右补白20px； -->
+					<div class="tit"><!-- 下部内补白8px，下边框1px，实线，relative设置元素为绝对位置，相对于该元素本来的位置进行变化，margin-bottom10px -->
+						<img src="img/jianjie.gif" alt=""><!-- 添加图片 -->
+						<span><a href="">More</a></span><!-- 内联元素中添加一张图片，span的样式position属性值为absolute设置元素位置为相对于包含它的元素的位置，也就是父元素的位置，相对父元素的位置为向右0向下0，margin-bottom为10px；链接为暗红色，没有下划线 -->
+					</div>
+					<div class='jj_c'><!-- 简介中文字部分， -->
+						<img src="img/jiangjie_img.gif" alt=""><!-- 图片向左浮动，上右下左，右下分别为10px； -->
+						<p>中新网客户端北京6月9日电(冷昊阳)今天，随着新疆、黑龙江等地即将结束最后一日的考试，2019年全国高考也随之落下大幕。在考试结束后，高考成绩何时发布？阅卷要如何保障准确和安全？填报志愿有啥变化？高考结束，这些考后信息需了解。</p>
+						<p>在山东，该省于8日召开2019年夏季高考第一次新闻发布会，据介绍，该省的答题卡扫描和评卷工作从6月9日开始，到20日结束。评卷期间将安排媒体开放日，向新闻媒体介绍有关评卷工作流程，接受社会监督。</p>
+						<p>在北京，据媒体报道，该地的阅卷计算机在阅卷前会重装操作系统，剔除大部分不必要的程序软件。阅卷期间所有计算机将组成内部局域网，并与外网实现物理隔离。此外，考生的答卷扫描后将以图片形式存在服务器里。存有答卷数据信息的服务器放置在专用机房，关键评卷场所配备视频监控录像设备，视频监控实现了全方位、无死角。</p>
+					</div><!-- 上面p标签样式为定义字体的颜色，段落的第一行缩进24px； -->
+				</div>
+				<div class="xinwen z"><!-- 宽度400px；高度309px；向左浮动； -->
+					<div class="tit">
+						<img src="img/xinwen.gif" alt="">
+						<span><a href="">More</a></span>
+					</div>
+					<div>
+						<div class="xw_c"><!-- 列表链接的盒子 -->
+							<ul><!-- 无序列表 -->
+									<li class="a"><!-- 背景颜色无，内补白为0，高度72px -->
+										<a href="#"><!-- 设置链接颜色，没有下划线样式 -->
+											<img src="img/wenzhang_img.gif" alt=""><!-- 图片向左浮动，右下外补白为10px； -->
+											<h3>这是一个标题标题标题</h3><!-- font-weight设置字体粗细，normal为正常，字体size为14px； -->
+											<p><!-- p段落的字体size为12px，颜色为#888，首行缩进为24px； -->
+												lasjcclfjalskjdflajlskjdflkajsldjflajsldjflajsldfj
+											</p>	
+										</a>
+									</li>
+									<li><a href="#"><!-- 清除列表样式，高度24px；行高24px；位置变为绝对位置，左侧内补白15px；背景图片、并且靠左居中、不重复，下部外补白5px； -->
+											<h3>这是一个标题标题标题</h3>
+											<span>2019-09-09</span>
+										</a>
+									</li>
+									<li><a href="#">
+											<h3>这是一个标题标题标题</h3>
+											<span>2019-09-09</span>
+										</a>
+									</li>
+									<li><a href="#">
+											<h3>这是一个标题标题标题</h3>
+											<span>2019-09-09</span>
+										</a>
+									</li>
+									<li><a href="#">
+											<h3>这是一个标题标题标题</h3>
+											<span>2019-09-09</span>
+										</a>
+									</li>
+									<li><a href="#">
+											<h3>这是一个标题标题标题</h3>
+											<span>2019-09-09</span>
+										</a>
+									</li>
+									<li><a href="#">
+											<h3>这是一个标题标题标题</h3>
+											<span>2019-09-09</span>
+										</a>
+									</li>
+									<li><a href="#">
+											<h3>这是一个标题标题标题</h3>
+											<span>2019-09-09</span>
+										</a>
+									</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="chanpin z">
+					<div class="tit">
+						<img src="img/chanpin.gif" alt="">
+						<span><a href="">More</a></span>
+					</div>
+					<div class="cp_c">
+						<ul>
+							<li><a href=""><img src="img/cp.gif" alt=""><span>这是一个标题</span></a></li>
+							<li><a href=""><img src="img/cp.gif" alt=""><span>这是一个标题</span></a></li>
+							<li><a href=""><img src="img/cp.gif" alt=""><span>这是一个标题</span></a></li>
+							<li><a href=""><img src="img/cp.gif" alt=""><span>这是一个标题</span></a></li>
+							<li><a href=""><img src="img/cp.gif" alt=""><span>这是一个标题</span></a></li>
+							<li><a href=""><img src="img/cp.gif" alt=""><span>这是一个标题</span></a></li>
+							<li><a href=""><img src="img/cp.gif" alt=""><span>这是一个标题</span></a></li>
+							<li><a href=""><img src="img/cp.gif" alt=""><span>这是一个标题</span></a></li>
+							<li><a href=""><img src="img/cp.gif" alt=""><span>这是一个标题</span></a></li>
+							<li><a href=""><img src="img/cp.gif" alt=""><span>这是一个标题</span></a></li>
+							<li><a href=""><img src="img/cp.gif" alt=""><span>这是一个标题</span></a></li>
+							<li><a href=""><img src="img/cp.gif" alt=""><span>这是一个标题</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>	
+		</div>
+		
+		<div class="cl"></div> <!-- 清除浮动对下面的div带来的影响，clear就是保证该元素两侧都不会有浮动元素的出现，弊端也是有的，如果文档中大量出这种无意义的元素，就会造成大量的冗余 -->
+		<div class="footer"><!-- 高度54px；宽度100%，背景颜色为图片的重复组成，页面的底部的总体盒子，终于到最后一个盒子了，其中包含两部分，上限的构造 -->
+			<div class="wp"><!-- 居中盒子 -->
+				<div class="footer_top"><!-- 上半部分，高度30px，行高30px，这里定义的颜色好像是无意义的。。。 -->
+					<span class="z"><a href="">关于我们</a>  |  <a href="">关于我们</a>  |  <a href="">关于我们</a>  |  <a href="">关于我们</a></span><!-- 左浮动，链接文字颜色为白色，没有下划线，文字size为10xp； -->
+					<span class="y">闽ICP备15008128号-2</span><!-- 右浮动 -->
+				</div>
+				<div class="footer_bottom">
+					<p><!-- 段落的文字颜色为#f60； -->
+						友情链接：<a href="www.baidu.com" target="_blank">百度</a><a href="www.baidu.com" target="_blank">百度</a><a href="www.baidu.com" target="_blank">百度</a><a href="www.baidu.com" target="_blank">百度</a><a href="www.baidu.com" target="_blank">百度</a>
+					</p><!-- 这是上面的a标签的说明，我写在这里，定义了链接的文字颜色，没有下划线，然后定义了一个伪类，实现鼠标在上面悬停的时候显示的颜色为#f60； -->
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
