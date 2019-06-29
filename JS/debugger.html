@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <style>
+        html body {
+            width: 100%;
+			height: 100%;
+        }
+        #d1 {
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            width: 50px;
+			height: 50px;
+			cursor: move;
+			background-color: hotpink;
+        }   
+    </style>
+</head>
+<body>
+    <div id="d1"></div>
+
+    <script type="text/javascript">
+		var xi = document.querySelector("#d1"); //dragBox是一个函数,括号中的是两个指定的形式参数的值; 
+		function getCss(e,s) {    //获取css样式中距离浏览器边界的距离
+            return parseInt(window.getComputedStyle(e)[s]);
+			}
+
+       var qX,
+           qY,
+           move = false,
+           dLeft = getCss(xi, "left"),    
+           dTop = getCss(xi, "top");    //定义几个数据变量,其中warp这个变量是死值,不是动态的,是静态的
+
+		xi.addEventListener("mousedown", function (e) {    //鼠标按下,执行函数,记录起始点的坐标,执行下一个函数
+            move = true;
+            qX = e.clientX;
+            qY = e.clientY;
+			}); 
+
+      document.addEventListener("mousemove", function (e) {    //移动函数主体,记录到达位置的坐标,进行相减,得到的变化的距离加上warp的值,就是变化后的坐标
+            if (move === true )
+			debugger;
+			{
+                var nX = e.clientX,
+                    nY = e.clientY;
+                xi.style.left = dLeft + nX - qX + "px";
+                xi.style.top = dTop + nY - qY + "px";
+				console.log(nX,nY);
+				console.log(qX,qY);
+				console.log(dLeft,dTop);
+				}
+			});
+
+       xi.addEventListener("mouseup", function (e) {    //鼠标抬起,执行这个函数,布尔值为假,不执行主体函数,不会移动,更新warp的值;
+            move = false;
+            dLeft = getCss(xi, "left");
+            dTop = getCss(xi, "top");
+		}); 
+    </script>
+</body>
+</html>

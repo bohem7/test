@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var Animal = function(){
+				this.eat = function(){
+					console.log("i'm eating!");
+				}
+			};
+			
+			var Human = function(name){
+				this.name = name;
+			}
+			Human.prototype = new Animal();
+			
+			var h1 = new Human('小明');
+		</script>
+	</body>
+</html>
